@@ -6,6 +6,7 @@ $users = [
     'Pepito',
     'Josep',
     'Sergi',
+    'Jordi',
 ];
 
 require 'spaghettiV3.view.php';

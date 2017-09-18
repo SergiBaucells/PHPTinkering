@@ -12,12 +12,19 @@
 <header>
 
     <ul>
-        <?php
+
+        <?php foreach ($users as $user) : ?>
+            <li><?=$user; ?></li>
+        <?php endforeach; ?>
+
+
+<!--        --><?php
         // Bucles o Loop
-        foreach ($users as $user) {
-            echo '<li>' .$user . '</li>';
-        }
-        ?>
+//        foreach ($users as $user) {
+//            //echo '<li>' . $user . '</li>';
+//            echo "<li>$user</li>";
+//        }
+//        ?>
     </ul>
 
 <!---->
