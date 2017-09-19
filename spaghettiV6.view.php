@@ -11,15 +11,16 @@
 <body>
 <header>
 
-   const markup = '
-    <div>
-        <h2>
-            ${person.name}
-        </h2>
-        <p class="location">${person.location}</p>
-        <p class="bio">${person.bio}</p>
-    </div>
-    ';
+    <?php foreach ($persons as $person) : ?>
+
+        <h2><?=$person['name']; ?></h2>
+
+        <ul>
+            <li><?=$person['city']; ?></li>
+            <li><?=$person['gender']; ?></li>
+        </ul>
+
+    <?php endforeach;?>
 
 </header>
 </body>
