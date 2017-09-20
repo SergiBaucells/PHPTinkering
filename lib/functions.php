@@ -11,6 +11,11 @@ function dd($value){
     die();
 }
 
+/**
+ * OBSOLET.
+ *
+ * @return PDO
+ */
 function connect(){
     try{
         return new PDO('mysql:host=127.0.0.1;dbname=prova','debian-sys-maint','QZkcNUSiPaYY4e1Z');
@@ -19,6 +24,12 @@ function connect(){
     }
 }
 
+
+/**
+ * OBSOLET.
+ *
+ * @return PDO
+ */
 function fetchAllTasks($pdo){
     $statement = $pdo->prepare('SELECT * FROM tasks');
 
