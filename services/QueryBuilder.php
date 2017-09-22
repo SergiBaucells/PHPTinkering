@@ -10,7 +10,7 @@ class QueryBuilder
 {
     protected $pdo;
 
-    public function __construct( PDO $pdo)
+    public function construct(PDO $pdo)
     {
         $this->pdo = $pdo;
     }
@@ -21,7 +21,7 @@ class QueryBuilder
 
         $statement->execute();
 
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        return $statement->fetchAll(PDO::FETCH_CLASS, 'Task');
     }
 
     /*
