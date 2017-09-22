@@ -9,17 +9,19 @@ class Connection{
 
     public static function connect($config){
         try{
+            $driver = $config['database']['driver'];
+            $host =  $config['database']['host'];
+            $dbname = $config['database']['name'];
+            $dsn = $driver . ':host=' . $host . ';dbname=' . $dbname;
+            $username = $config['database']['username'];
+            $password = $config['database']['password'];
+            $options = $config['database']['options'];
 
-//            return new PDO(
-//                'mysql:host=127.0.0.1;dbname=prova',
-//                'debian-sys-maint',
-//                'QZkcNUSiPaYY4e1Z');
-
-            $connectionString = $config['database']['driver'] . ':' .
-                $config['database']['host'] . ';' .
-                $config['database']['name'] . ',' .
-                $config['database']['name'] . ',' .
-                $config['database']['password'];
+            return new PDO (
+                $dsn,
+                $username ,
+                $password,
+                $options);
 
         }catch (PDOException $e){
             die('Error connecting: ' . $e->getMessage() );

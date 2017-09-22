@@ -15,6 +15,8 @@
                 <?= $task->name ?>
                 <?php if ($task->completed=true): echo "<span class='icon'>&#9989</span>?>
                <!--Mostrar tasques completes i incompletes, les completes, taxar-les-->
+               
+               <!--<strong>Status: <?= $task->cp,pleted ? 'Complete' : 'Incomplete' </strong>-->
                 
             </li>
         <?php endforeach;?>
