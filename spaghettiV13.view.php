@@ -12,12 +12,14 @@
     <ul>
         <?php foreach ($tasks as $task) : ?>
             <li>
-                <?= $task->name ?>
-                <?php if ($task->completed=true): echo "<span class='icon'>&#9989</span>?>
-               <!--Mostrar tasques completes i incompletes, les completes, taxar-les-->
-               
-               <!--<strong>Status: <?= $task->cp,pleted ? 'Complete' : 'Incomplete' </strong>-->
-                
+
+                <!--Mostrar tasques completes i incompletes, les completes, taxar-les-->
+                <?php if ($task->completed) : ?>
+                    <span class="icon">&#10004</span><strike><?= $task->name ?></strike>
+                <?php else : ?>
+                    <?= $task->name ?>
+                <?php endif ?>
+
             </li>
         <?php endforeach;?>
     </ul>
